@@ -1,0 +1,28 @@
+ background-image: ("bj-1.png");
+     /* 定义预览页面的样式 */
+    .preview-window {
+        width: 1366px;
+        height: 768px;
+        }
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transform: translate(0, 50%);
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+}
+
+h1, h2, h3, p {
+  margin: 16px 0;
+}
+
+a {
+  color: blue;
+  text-decoration: none;
+}
