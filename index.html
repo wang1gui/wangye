@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1920, initial-scale=1.0">
+  <title>养天和大药房-常用网址</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+/* 设置整个页面的背景图片，图片会覆盖整个页面，不重复，并且固定不动 */
+body {
+  width: 100vw; /* 页面的宽度为视口的100% */
+  height: 100vh; /* 页面的高度为视口的100% */
+  margin: 0; /* 移除默认的边距 */
+  display: block; /* 确保页面占满整个视口 */
+  background-image: url('imge/bj-1.jpg'), url('imge/dt.webp'); /* 设置背景图片路径 */
+  background-position: right bottom,center center; /* 将背景图片定位在页面的右下角 */
+   background-repeat: no-repeat, repeat; /* 背景图片不重复，动图平铺 */
+  background-attachment: fixed; /* 背景图片固定，不会随着页面滚动而移动 */
+}
+
+/* 设置一个id为time-display的元素的样式，这个元素会绝对定位在页面的顶部，距离顶端25像素，距离左边50%，并使用translate方法进行偏移，使其居中显示 */
+#time-display {
+  position: absolute; /* 元素使用绝对定位 */
+  top: 25px; /* 元素顶部距离页面顶部25像素 */
+  left: 50%; /* 元素左边距离页面左边50% */
+  transform: translate(-50%, -50%); /* 元素水平垂直居中 */
+  background-color: rgba(144, 146, 146, 0.5); /* 设置背景颜色为非常浅的蓝色，不完全不透明 */
+  color: #FFFFFF; /* 文字颜色为白色 */
+  padding: 10px; /* 内边距为10像素 */
+  border-radius: 5px; /* 边框圆角为5像素 */
+  font-size: 20px; /* 文字大小为24像素 */
+  font-weight: bold; /* 文字加粗 */
+}
+
+/* 设置类名为nav-link的链接样式，这些链接会显示为块级元素，没有下划线，有 padding 和背景颜色，并且当鼠标悬停时会有背景颜色和阴影的变化 */
+.nav-link {
+  display: inline-block; /* 将元素改为内联块级元素 */
+  width: 200px; /* 设置元素的宽度 */
+  height: 50px; /* 设置元素的高度 */
+  color: #ffffff; /* 文字颜色为白色 */
+  text-decoration: none; /* 去除下划线 */
+  padding: 10px 20px; /* 内边距为10像素水平和20像素垂直 */
+  background-color: #93c5fd; /* 背景颜色为浅蓝色 */
+  margin-bottom: 5px; /* 底部外边距为5像素 */
+  transition: background-color 0.3s ease; /* 背景颜色变化过渡效果，持续时间为0.3秒，变化曲线为ease */
+  border-radius: 10px; /* 边框圆角为5像素 */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* 设置阴影，水平偏移为0，垂直偏移为4像素，模糊半径为8像素，颜色为浅黑色 */
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3); /* 设置文字阴影，水平偏移为0，垂直偏移为2像素，模糊半径为4像素，颜色为浅黑色 */
+  font-weight: bold; /* 文字加粗 */
+  font-size: 18px; /* 文字大小为24像素 */
+}
+
+/* 设置类名为nav-link的链接在鼠标悬停时的样式，背景颜色会变化，元素会微微抬起，阴影也会增强 */
+.nav-link:hover {
+  background-color: #60a5fa; /* 鼠标悬停时的背景颜色变化 */
+  transform: translateY(-2px); /* 元素微微向下移动，产生悬停效果 */
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.45); /* 阴影增强 */
+}
+/* 定义预览窗口的样式 */
+    #preview-window {
+      position: absolute; /* 使用绝对定位 */
+      top: 100px; /* 将其位置设置为屏幕顶部的50% */
+      left: 205px; /* 将其位置设置为屏幕左侧的50% */
+      width: 1024px; /* 设置预览窗口的宽度为600像素 */
+      height: 768px; /* 设置预览窗口的高度为400像素 */
+      border: 0px solid #ccc; /* 添加一个灰色边框 */
+      display: none; /* 默认隐藏预览窗口 */
+      pointer-events: none; /* 防止鼠标事件影响预览窗口 */
+    }
+
+/* 这是一个页脚样式定义 */
+    footer {
+            border-radius: 10px;   /* 圆角 */
+            background-color: #e2dfdf;
+            color: #333;
+            text-align: center;
+            padding: 10px 0;
+            width: 350px; /* 宽度与视口相同 */
+            position: fixed;
+            bottom: 0;
+            left: 40%;
+            z-index: 100; /* 确保页脚显示在其它内容之上 */
+        }
+
+
+/*快捷键样式*/
+.content {
+    position: absolute;
+    bottom: 30px;
+    right: 0;
+    writing-mode: vertical-rl;
+}
+/*快捷键字体*/
+button {
+  color: gray;
+  font-weight: bold;
+}
+  </style>
+</head>
+
+<body class="flex">
+  <nav class="w-48 text-white">
+  <div class="navigation">
+    <a href="https://www.baidu.com/" class="nav-link">百度官网</a>
+        <a href="http://www.ythoa.com/" class="nav-link">养天和OA系统</a>
+        <a href="https://recipe.hospf.com/pc/" class="nav-link">在水医方</a>
+        <a href="https://www.ebaolife.net/login.jsp" class="nav-link">智慧E保</a>
+        <a href="https://pay.qijian99.com/login" class="nav-link">企健付</a>
+        <a href="https://pay.pukangpay.cn/" class="nav-link">普康卡</a>
+        <a href="https://saas.pharmakeyring.com/#/login/" class="nav-link">福利卡</a>
+        <a href="http://193.112.97.114:6900/portal/main.jsp" class="nav-link">金蝶EAS(费用报销)</a>
+        <a href="http://www.ebaolife.net/login.jsp;jsessionid=CF09928710CB78225D54CF2513091BCC" class="nav-link">医卡通</a>
+        <a href="http://shangjia.j1cn.com/partner-web/partner-compatible/index.html#!/login" class="nav-link">建e卡</a>
+        <a href="https://etax.hunan.chinatax.gov.cn/wsbs/" class="nav-link">湖南电子税务局</a>
+        <a href="http://mc.gsplead.com:12580/user/admin_login.htm" class="nav-link">冷链</a>
+        <a href="http://10.93.28.227/#/login?redirect=%2Fhome/" class="nav-link">两定医疗信息平台</a>
+        <a href="https://www.gsxt.gov.cn/index.html/" class="nav-link">工商年报</a>
+        <a href="http://cms.tinree.com/" class="nav-link">天瑞 短信</a>
+        <a href="https://yiyao.meituan.com/main/frame#/page/home" class="nav-link">美团买药商家端</a>
+        <a href="https://nr.ele.me/eleme-nr-bfe-newretail/eb_login?redirect_url=https%3A%2F%2Fnr.ele.me%2Feleme_nr_bfe_retail%2Feb_common" class="nav-link">饿了么零售商家端</a>
+        <a href="https://fxg.jinritemai.com/login/common?next=https%3A%2F%2Fjsls.jinritemai.com%2F" class="nav-link">抖店-后台</a>
+        <!-- 在此处添加更多导航链接 -->
+  </nav>
+  <div class="flex-1">
+    <div id="time-display">:</div>
+    <div class="background-container"></div>
+    <div id="preview-window"></div>
+    
+<div class="content">
+        <button onclick="location.href='wd/店内各账号密码.mht';">店内各种账号密码一</button>
+        <button onclick="location.href='wd/高原反应备药.txt';">高原反应备药</button>
+    </div>
+
+    <!-- 主要内容区域 -->
+   <footer>
+           <p>养天和大药房-版权所有 &copy; 2024</p>
+   </footer>
+  </div>
+
+  <script>
+    // 动态更改背景图片的函数
+    function changeBackgroundImage() {
+      var images = ["imge/bj-1.jpg", "imge/bj-2.jpg", "imge/bj-3.jpg", "imge/bj-4.jpg", "imge/bj-5.jpg", "imge/bj-6.jpg"]; // 添加更多背景图片
+      var currentImage = 0;
+      function rotateBackgroundImage() {
+        currentImage = (currentImage + 1) % images.length;
+        document.body.style.backgroundImage = "url('" + images[currentImage] + "')";
+      }
+      setInterval(rotateBackgroundImage, 25000); // 每 25 秒更改一次背景
+    }
+    changeBackgroundImage();
+
+ /* 预览窗口动作 */
+// 当文档加载完成后，添加事件监听器
+    document.addEventListener('DOMContentLoaded', function() {
+      // 选择所有的导航链接
+      const navLinks = document.querySelectorAll('.nav-link');
+      // 选择预览窗口元素
+      const previewWindow = document.getElementById('preview-window');
+      // 遍历每个导航链接
+      navLinks.forEach(function(link) {
+        // 为每个链接添加鼠标悬停事件监听器
+        link.addEventListener('mouseover', function() {
+          // 显示预览窗口
+          previewWindow.style.display = 'block';
+          // 获取链接的href属性，并将其插入到iframe的src属性中
+          const href = link.getAttribute('href');
+          previewWindow.innerHTML = '<iframe src="' + href + '" frameborder="0" width="100%" height="100%"></iframe>';
+        });
+        // 为每个链接添加鼠标移开事件监听器
+        link.addEventListener('mouseout', function() {
+          // 隐藏预览窗口
+          previewWindow.style.display = 'none';
+          // 清除预览窗口中的iframe内容
+          previewWindow.innerHTML = '';
+        });
+      });
+    });
+
+
+     // 获取当前时间
+function getCurrentTime() {
+  var now = new Date();
+  var year = now.getFullYear();
+  var month = now.getMonth() + 1;
+  var day = now.getDate();
+  var hours = now.getHours().toString().padStart(2, '0');
+  var minutes = now.getMinutes().toString().padStart(2, '0');
+  var seconds = now.getSeconds().toString().padStart(2, '0');
+  var period = hours >= 12 ? '下午' : '上午';
+  if (hours >= 12) {
+    hours -= 12;
+  } else if (hours === 0) {
+    hours = 12;
+  }
+  // 完整的时间字符串
+  var timeString = year + "年 " + month + "月 " + day + "日 " + hours + ":" + minutes + ":" + seconds;
+  return timeString;
+}
+// 更新时间显示
+function updateTimeDisplay() {
+  var time = getCurrentTime();
+  document.getElementById('time-display').textContent = time;
+}
+// 初始化时间显示
+updateTimeDisplay();
+// 每秒更新时间
+setInterval(updateTimeDisplay, 1000)
+  </script>
+</body>
+
+</html>
