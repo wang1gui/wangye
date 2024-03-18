@@ -198,29 +198,32 @@ button {
 changeBackgroundImage();
 
  /* 预览窗口动作 */
- document.addEventListener('DOMContentLoaded', function() {
-  const navLinks = document.querySelectorAll('.nav-link');
-  const previewWindow = document.getElementById('preview-window');
-
-  navLinks.forEach(function(link) {
-    link.addEventListener('mouseover', function(event) {
-      event.preventDefault(); // 阻止默认的链接跳转行为
-      previewWindow.style.display = 'block';
-      const href = link.getAttribute('href');
-      previewWindow.innerHTML = '<iframe src="' + href + '" frameborder="0" width="100%" height="100%"></iframe>';
+// 当文档加载完成后，添加事件监听器
+    document.addEventListener('DOMContentLoaded', function() {
+      // 选择所有的导航链接
+      const navLinks = document.querySelectorAll('.nav-link');
+      // 选择预览窗口元素
+      const previewWindow = document.getElementById('preview-window');
+      // 遍历每个导航链接
+      navLinks.forEach(function(link) {
+        // 为每个链接添加鼠标悬停事件监听器
+        link.addEventListener('mouseover', function() {
+          // 显示预览窗口
+          previewWindow.style.display = 'block';
+          // 获取链接的href属性，并将其插入到iframe的src属性中
+          const href = link.getAttribute('href');
+          previewWindow.innerHTML = '<iframe src="' + href + '" frameborder="0" width="100%" height="100%"></iframe>';
+        });
+        // 为每个链接添加鼠标移开事件监听器
+        link.addEventListener('mouseout', function() {
+          // 隐藏预览窗口
+          previewWindow.style.display = 'none';
+          // 清除预览窗口中的iframe内容
+          previewWindow.innerHTML = '';
+        });
+      });
     });
 
-    link.addEventListener('mouseout', function() {
-      previewWindow.style.display = 'none';
-      previewWindow.innerHTML = '';
-    });
-
-    // 阻止点击事件的默认行为
-    link.addEventListener('click', function(event) {
-      event.preventDefault();
-    });
-  });
-});
 
 
 
